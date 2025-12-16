@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/api/users", "destination": "/api/users" },
+    { "source": "/api/users/create", "destination": "/api/users/create" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
+}
